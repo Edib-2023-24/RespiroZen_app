@@ -17,3 +17,162 @@
 /* Colores */
 
 /* ******************************** */
+
+* {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  width: 430px;
+  height: 932px;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 140px;
+  flex-shrink: 0;
+  background: #FEFDF9;
+}
+
+img .logo {
+  display: flex;
+  align-items: center;
+  width: 309px;
+  height: 315px;
+  flex-shrink: 0;
+  border-radius: 315px;
+  background: #115865;
+}
+
+.circulo-pulmon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 309px;
+  height: 315px;
+  flex-shrink: 0;
+  border-radius: 315px;
+  background: #115865;
+  overflow: hidden;
+  /* Añadido para ocultar parte de la animación que se extiende fuera del círculo */
+
+}
+
+img .pulmon {
+  width: 136px;
+  height: 163px;
+  flex-shrink: 0;
+}
+
+.action-b {
+  display: flex;
+  width: 224px;
+  height: 56px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.start-button,
+.about-button,
+.restart-button {
+  display: flex;
+  width: 224px;
+  height: 56px;
+  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  border: 2px solid #2B82AB;
+  color: #2B82AB;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.start-button:hover,
+.about-button:hover,
+.restart-button:hover {
+
+  background-color: #115865;
+  /* Cambiar a tu color de fondo deseado al hacer hover */
+  color: #fff;
+  /* Cambiar a tu color de texto deseado al hacer hover */
+}
+
+/* Modifica la definición de la animación breathAnimation */
+@keyframes breathAnimation {
+
+  0%,
+  100% {
+    transform: scale(0.2);
+    border-radius: 50%;
+  }
+
+  25% {
+    transform: scale(1);
+    /* Aumentamos la escala para la expansión */
+    border-radius: 50%;
+  }
+
+  50% {
+    transform: scale(0.2);
+    border-radius: 50%;
+  }
+
+  75% {
+    transform: scale(1);
+    /* Aumentamos la escala para la contracción */
+    border-radius: 50%;
+  }
+}
+
+/* Modifica la regla para aplicar la animación */
+.breath {
+  animation: breathAnimation 10s ease-in-out infinite;
+  /* Duración de 15 segundos y repite infinitamente */
+}
+
+/* ABOUT */
+
+.container2 {
+
+  display: flex;
+  width: 430px;
+  height: 932px;
+  padding-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  background-color: #FEFDF9;
+  background-image: url(../assets/fondo.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+
+.container2 p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  text-align: justify;
+}
